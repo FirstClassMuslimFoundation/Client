@@ -2,8 +2,10 @@ import backgroundImage from '../assets/map.png'
 
 export const ContactMap = () => {
     return (
-        <div className='w-full h-full' style={{ backgroundImage: `url(${backgroundImage})` }}>
-            <img src={ backgroundImage} alt="" />
+        <div>
+            <div className='w-full h-full rounded-full' style={{ backgroundImage: `url(${backgroundImage})` }}>
+                <img className='w-full h-full rounded-3xl' src={backgroundImage} alt="" />
+            </div>
         </div>
     )
 }

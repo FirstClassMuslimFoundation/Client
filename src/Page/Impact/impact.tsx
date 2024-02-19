@@ -1,38 +1,6 @@
-// import { ImpactContainer } from "./container"
 import shonuyi from "../../assets/shonuyi.png"
 import kesh from "../../assets/kesh.png"
 import quwam from "../../assets/quwam.png"
-
-// export const Impact = () => {
-//     const array = [
-//         {
-//             text: "The Foundation has been a beacon of hope in my life. Their educational programs not only enriched my knowledge of Islam but also enabled me to become a better person. I learned about tolerance, compassion, and the importance of community. Thanks to their guidance, I've grown as a responsible and respectful individual.",
-//             color: "red",
-//             image: shonuyi
-//         },
-//         {
-//             text: "In a world where many struggle in silence, First Class Muslim Foundation's open arms and willingness to extend a helping hand are truly inspirational. I feel blessed to have crossed paths with this wonderful organization, which stands as a testament to the values of compassion, empathy, and faith. Their dedication to making lives better exemplifies the true essence of Islam.",
-//             color: "green",
-//             image: kesh
-//         },
-//         {
-//             text: "This is a  The Foundation's commitment to Islamic education is truly commendable. Through their educational scholarships and mentorship programs, they have helped my access to quality Islamic principles & Methodology that will benefit me in the long run. I believe this is not just charity; it's an investment in the future of the community. about how we helped a company",
-//             color: "blue",
-//             image: quwam
-//         }
-//     ]
-//     return (
-//         <div>
-//             <h1 className="font-bold text-center text-3xl">Impact stories</h1>
-//             <div className="flex flex-row">
-//             {array.map((item, index) => {
-//                 return <ImpactContainer key={index} text={item.text} color={item.color} image={item.image} />
-//             })}
-//             </div>
-//         </div>
-//     )
-// }
-
 import { AlumniContainer } from "./container"
 
 const bodies = [

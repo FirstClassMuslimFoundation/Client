@@ -31,7 +31,7 @@ export const Management = () => {
     return (
         <div className=''>
         <div className='' style={{ backgroundImage: `url(${backgroundImage})` }}>
-            <h1 className="font-bold h-full w-full text-center text-white text-3xl pt-8 hover:underline transition-transform transform hover:scale-110">Our Management Team</h1>
+            <h1 className="font-bold h-full w-full text-center text-white text-5xl pt-8">Our Management Team</h1>
             <div className="flex flex-row gap-x-8 p-24 justify-start" style={{ width: `${array.length * 700}px` }}>
                     {array.map((data, index) => (
                         <ManagementContainer

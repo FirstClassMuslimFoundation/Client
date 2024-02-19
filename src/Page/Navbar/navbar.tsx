@@ -4,11 +4,11 @@ import { Dialog } from '@headlessui/react'
 
 
 const navigation = [
-  { name: 'About', href: '/about' },
-  { name: 'Courses', href: '/courses' },
+  { name: 'Home', href: '/about' },
+  { name: 'About Us', href: '/courses' },
+  { name: 'Team', href: '/team' },
   { name: 'Gallery', href: '/gallery' },
-  { name: 'News', href: '/news' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Contact Us', href: '/contact' },
 ]
 
 export function Navbar() {
@@ -52,11 +52,11 @@ export function Navbar() {
               </a>
             ))}
           </div>
-          {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="#" className="text-sm bg-blue-600 px-6 py-3 rounded-2xl font-semibold leading-6 text-white">
+              Donate Now <span aria-hidden="true">&rarr;</span>
             </a>
-          </div> */}
+          </div>
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />

@@ -1,33 +1,3 @@
-// import event1 from '../assets/event1.png'
-
-// export const EventContainer = () => {
-//     return (
-//         <div>
-//             <div className='p-6'>
-//                 <div className='' style={{ position: 'relative', width: '400px', height: '300px' }}>
-//                     <img
-//                         src={event1}
-//                         alt="Your Image"
-//                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-//                     />
-//                     <div className='bg-gray-600 hover:bg-red-500' style={{ position: 'absolute', top: 0, left: 0, width: '80px', height: '80px' }}>
-//                         <p className="text-4xl text-white hover:text-red-700">21</p>
-//                         <h1 className="text-3xl text-white">May</h1>
-//                     </div>
-//                 </div>
-//             </div>
-//             <div className='px-6 pb-6'>
-//                 <p className='font-light'>Organized By : <span className='font-bold'>First Class Muslim Foundation</span></p>
-//             </div>
-//             <div className='border border-gray-500 ml-6 w-96'></div>
-//             <div className='p-6'>
-//                 <h1 className='hover:text-red-700 text-2xl pb-3'>Excursion To Ibadan Zoo</h1>
-//                 <p className='font-light text-gray-500'>An educational excursion to the Ibadan Zoo, gaining <br/> valuable insights into wildlife conservation & biodiversity.</p>
-//             </div>
-//         </div>
-//     )
-// }
-
 import React from 'react';
 
 export interface EventContainerProps {

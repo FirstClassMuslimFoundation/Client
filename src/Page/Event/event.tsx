@@ -4,7 +4,7 @@ export const EventGallery = () => {
     const imagesArray: string[] = [esman, esman, esman, esman, esman]
     return (
         <div>
-            <h1 className="text-black text-center text-3xl font-bold p-8 hover:underline transition-transform transform hover:scale-110">Event Gallery</h1>
+            <h1 className="text-black text-center text-5xl font-bold p-8">Event Gallery</h1>
             <div className='flex flex-row gap-10 justify-center'>
                 {imagesArray.map((item, index) => {
                     return (

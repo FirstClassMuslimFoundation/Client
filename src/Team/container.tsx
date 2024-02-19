@@ -24,3 +24,5 @@ export const TeamContainer: React.FC<ITeamProps> = ({ imageUrl, instagram, faceb
         </div>
     )
 }
+
+

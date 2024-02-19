@@ -7,7 +7,7 @@ interface ManagementContainerProps {
 
 export const ManagementContainer: React.FC<ManagementContainerProps> = ({ image, post, text, defaultText }) => {
     return (
-        <div className="max-w-xs md:max-w-none bg-white w-full md:w-96 h-96 rounded-2xl flex justify-evenly overflow-hidden hover:underline transition-transform transform hover:scale-110">
+        <div className="max-w-xs md:max-w-none bg-white w-full md:w-96 h-[450px] rounded-2xl flex justify-evenly overflow-hidden hover:underline transition-transform transform hover:scale-110">
             <div className="space-y-6">
                 <div className="mt-8">
                     <img
