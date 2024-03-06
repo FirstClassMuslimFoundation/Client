@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Blank } from "../blank.tsx";
 import { About } from "./About/about.tsx";
 import { Below } from "./Below/below";
@@ -13,6 +14,9 @@ import { Raise } from "./Youths/raise.tsx";
 
 
 export const Home = () => {
+    useEffect(() => {
+        document.title = "First Class Muslim Foundation || Home"
+    })
     return (
         <div>
             <Navbar />
