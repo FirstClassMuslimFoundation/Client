@@ -28,7 +28,7 @@ export const Hero = () => {
 
     return (
         <div style={{ position: 'relative' }}>
-            <img src={images[currentImageIndex]} alt="" style={{ width: '100%', height: 'auto' }} />
+            <img className='w-full h-screen' src={images[currentImageIndex]} alt="" style={{ width: '100%', height: 'auto' }} />
             <button onClick={goToPrevImage} style={{ position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)', zIndex: 1 }}>
                 <img src={arrow} alt="" />
             </button>

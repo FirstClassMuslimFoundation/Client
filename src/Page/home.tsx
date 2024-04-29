@@ -11,6 +11,7 @@ import { Mission } from "./Mission/mission";
 import { Navbar } from "./Navbar/navbar";
 import { Newsletter } from "./Newsletter/newsletter";
 import { Raise } from "./Youths/raise.tsx";
+import { EventsForFCMF } from "./Events/events.tsx";
 
 
 export const Home = () => {
@@ -30,6 +31,7 @@ export const Home = () => {
             <Management />
             <Blank />
             <EventGallery />
+            <EventsForFCMF />
             <Blank />
             <Impact />
             <Blank />
