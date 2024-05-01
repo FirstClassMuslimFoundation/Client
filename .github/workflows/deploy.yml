@@ -12,10 +12,10 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
 
-    - name: Use Node.js 16
+    - name: Use Node.js latest
       uses: actions/setup-node@v2
       with:
-        node-version: '16'
+        node-version: latest
       
     - name: 🔨 Build Project
       run: |
@@ -30,4 +30,3 @@ jobs:
         password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
         protocol: ${{ secrets.GIT_CPANEL_REACT_PROTOCOL }}
         local-dir: ./build/
-        timeout: 60000
