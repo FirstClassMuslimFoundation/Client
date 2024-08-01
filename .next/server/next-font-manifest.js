@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/khabibthekillys./Documents/Client/src/app/layout":["static/media/c9a5bc6a7c948fb0-s.p.woff2","static/media/3534416bbfdcc9be-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/khabibthekillys./Documents/Client/src/app/layout\":[\"static/media/c9a5bc6a7c948fb0-s.p.woff2\",\"static/media/3534416bbfdcc9be-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

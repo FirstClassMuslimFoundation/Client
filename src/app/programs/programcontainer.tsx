@@ -92,7 +92,7 @@ export const ProgramContainer: React.FC<ProgramContainerProps> = ({ program }) =
                     <h1 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-purple-950 sm:text-balance mt-3">
                         {program.name}
                     </h1>
-                    <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-purple-600 sm:text-balance">
+                    <p className="text-wrap text-break mt-4 sm:mt-6 text-lg sm:text-xl text-purple-600 sm:text-balance">
                         {program.description}
                     </p>
                     <div className="flex justify-center gap-2 sm:gap-4 border-2 mt-2 rounded-sm border-purple-300 p-2">

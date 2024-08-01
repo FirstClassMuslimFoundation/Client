@@ -6,9 +6,9 @@ import { ProgramContainer, ProgramContainerProps } from './programcontainer';
 export const ProgramList = () => {
     const programs: ProgramContainerProps['program'][] = [
         { name: 'ULSP', description: 'Undergraduate Learning Support Program', link: 'https.com', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
-        { name: 'ULSP', description: 'Undergraduate Learning Support Program', link: 'https.com', isCurrent: true, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
-        { name: 'ULSP', description: 'Undergraduate Learning Support Program', link: 'https.com', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
-        { name: 'ULSP', description: 'Undergraduate Learning Support Program', link: 'https.com', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
+        { name: 'FBS', description: 'Foundation Board Scholarship', link: 'https.com', isCurrent: true, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
+        { name: 'SMP', description: 'Student Mentorship Program', link: 'https.com', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
+        { name: 'M-First', description: 'Undergraduate Learning Support Program', link: 'https.com', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
         { name: 'ULSP', description: 'Undergraduate Learning Support Program', link: 'https.com', isCurrent: true, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
         { name: 'ULSP', description: 'Undergraduate Learning Support Program', link: 'https.com', isCurrent: false, startDate: 'Aug 6, 2023', endDate: 'Aug 6, 2024', badge: 'New' },
     ];

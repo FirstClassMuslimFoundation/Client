@@ -143,7 +143,7 @@ function Navigation() {
             </NavigationRow>
             <NavigationRow>
                 <NavigationItem href="/mission">Our Mission</NavigationItem>
-                <NavigationItem href="/events">Our Events</NavigationItem>
+                <NavigationItem href="/gallery">Gallery</NavigationItem>
             </NavigationRow>
         </nav>
     );
