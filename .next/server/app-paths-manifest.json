@@ -1,7 +1,7 @@
 {
-  "/mission/page": "app/mission/page.js",
-  "/page": "app/page.js",
   "/programs/fbs/page": "app/programs/fbs/page.js",
   "/programs/m-first/page": "app/programs/m-first/page.js",
-  "/programs/page": "app/programs/page.js"
+  "/programs/page": "app/programs/page.js",
+  "/programs/ulsp/page": "app/programs/ulsp/page.js",
+  "/programs/smp/page": "app/programs/smp/page.js"
 }
