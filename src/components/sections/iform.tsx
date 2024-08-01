@@ -1,11 +1,15 @@
 import React from 'react';
 
-const EmbeddedForm = () => {
+interface EmbeddedFormProps {
+    link: string;
+}
+
+const EmbeddedForm: React.FC<EmbeddedFormProps> = (link) => {
     return (
         <div className='flex overflow-auto'>
             <div style={{ width: '100%', height: '100vh' }}>
                 <iframe
-                    src="https://zfrmz.com/dTlWiPKaB7IBqg3sZofo"
+                    src={link.link}
                     style={{ border: 'none', width: '100%', height: '100%' }}
                     title="Embedded Form"
                 />

@@ -1,5 +1,8 @@
 {
-  "/programs/m-first/page": "app/programs/m-first/page.js",
+  "/_not-found": "app/_not-found.js",
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/programs/fbs/page": "app/programs/fbs/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/programs/page": "app/programs/page.js",
+  "/programs/m-first/page": "app/programs/m-first/page.js"
 }
