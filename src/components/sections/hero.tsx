@@ -207,18 +207,18 @@ export const HomeHero = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
   const opts = {
-    height: "390",
-    width: "640",
+    height: "100%",
+    width: "100%",
     playerVars: {
-      autoplay: 0,
+      autoplay: 1,
+      controls: 1,
     },
   };
-
   return (
     <div className="hero-container">
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <FadeIn className="max-w-2xl">
+          <FadeIn className="md:w-1/2 max-w-2xl">
             <h1 className="font-display text-6xl sm:text-7xl md:text-8xl font-semibold tracking-tight text-purple-950 text-balance">
               Welcome to First Class Muslim Foundation
             </h1>
@@ -228,11 +228,15 @@ export const HomeHero = () => {
               global impact.
             </p>
           </FadeIn>
-          <FadeIn className="flex-grow flex justify-center items-center">
-            <YouTube
-              videoId={"soqfpQnJ6r0"}
-              opts={opts}
-              className="w-full h-full"
+
+          <FadeIn className="md:w-1/2 flex justify-center items-center">
+            <Image
+              src={"/images/hero.png"}
+              alt={"Hero Section Image"}
+              width={400}
+              height={400}
+              objectFit="cover"
+              className="rounded-lg"
             />
           </FadeIn>
         </div>
