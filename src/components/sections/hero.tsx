@@ -20,6 +20,26 @@ import {
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+
+interface RequiredDocument {
+  document: string;
+  notes: string[];
+}
+
+interface ScholarshipData {
+  title: string;
+  subtitle: string;
+  about: string;
+  benefits: string[];
+  eligibleInstitutions: string[];
+  eligibilityCriteria: string[];
+  requiredDocuments: RequiredDocument[];
+  applicationDetails: {
+    portal: string;
+    openDate: string;
+    closeDate: string;
+  };
+}
 const scholarshipData = {
   title: "FCM Foundation Board Scholarship",
   subtitle:
@@ -374,31 +394,33 @@ export const HomeHero = () => {
           </Card>
 
           <Card className="border-[#2f3497] border-t-4">
-            <CardHeader>
-              <CardTitle className="text-[#2f3497]">
-                Required Documents
-              </CardTitle>
-            </CardHeader>
             <CardContent>
+              <h3>
+                <strong>Required Documents for Application</strong>
+              </h3>
               <p>
-                The following documents are to be provided and uploaded during
-                the application:
+                <strong>
+                  The following documents are to be provided and uploaded during
+                  the application:
+                </strong>
               </p>
               <ul className="list-disc pl-5 space-y-2">
-                {scholarshipData.requiredDocuments.map((item, index) => (
-                  <li key={index}>
-                    <p>
-                      <strong>{item.document}</strong>{" "}
-                    </p>
-                    {item.notes.length > 0 && (
-                      <ul className="list-disc pl-5">
-                        {item.notes.map((note, noteIndex) => (
-                          <li key={noteIndex}>{note}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
+                {scholarshipData.requiredDocuments.map((item, index) =>
+                  item ? (
+                    <li key={index}>
+                      <p>
+                        <strong>{item.document}</strong>
+                      </p>
+                      {item.notes.length > 0 && (
+                        <ul className="list-disc pl-5">
+                          {item.notes.map((note, noteIndex) => (
+                            <li key={noteIndex}>{note}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ) : null
+                )}
               </ul>
             </CardContent>
           </Card>
