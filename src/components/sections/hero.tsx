@@ -3,6 +3,8 @@
 import { Container } from "@/components/Container";
 import { FadeIn } from "../uis/FadeIn";
 import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 import {
   BookOpen,
@@ -14,12 +16,89 @@ import {
   Calendar,
   CheckCircle,
   Facebook,
-  Twitter,
-  Linkedin,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+const scholarshipData = {
+  title: "FCM Foundation Board Scholarship",
+  subtitle:
+    "For female undergraduates in selected public universities in Nigeria",
+  about:
+    "FCM Foundation Board Scholarship (FCM FBS) is a debut scholarship programme aimed at providing a one-time academic support to female Muslim students in 200 and 300 levels. The scholarship includes one-time monetary support and a one-day mentorship session for selected scholars.",
+  benefits: [
+    "Scholarship Funds",
+    "One day mentorship session",
+    "Post scholarship disbursement mentorship and guidance",
+    "Possible future support for higher learning",
+  ],
+  eligibleInstitutions: [
+    "Federal University of Technology, Akure",
+    "Obafemi Awolowo University, Ile-Ife",
+    "Federal University of Agriculture, Abeokuta",
+    "University of Ibadan",
+    "University of Lagos",
+    "University of Ilorin",
+    "Federal University of Health Sciences, Ila Orangun, Osun State",
+    "Adeyemi Federal University of Education, Ondo",
+    "Adekunle Ajasin University, Akungba",
+    "Ekiti State University",
+    "Kwara State University, Ilorin",
+    "Ladoke Akintola University of Technology, Ogbomoso",
+    "Ondo State University of Science and Technology Okitipupa",
+    "Olabisi Onabanjo University, Ago Iwoye",
+    "Lagos State University, Ojo",
+    "Tai Solarin University of Education Ijebu Ode",
+    "Osun State University Osogbo",
+    "Ondo State University of Medical Sciences",
+    "First Technical University Ibadan",
+    "Lagos State University of Education, Ijanikin",
+    "Lagos State University of Science and Technology Ikorodu",
+    "University of Ilesa, Osun State",
+  ],
+  eligibilityCriteria: [
+    "Be a female undergraduate Muslim student",
+    "Be currently in 200 or 300 level in one of the 22 eligible universities",
+    "Have a minimum CGPA of 4.5 and above (or equivalence)",
+    "Be ready to attend the one day mentorship session in person in Lagos, Nigeria in November 2024",
+  ],
+  requiredDocuments: [
+    {
+      document: "Student Identity Card (valid card of applicant’s institution)",
+      notes: [],
+    },
+    {
+      document: "Reference letter from a reputable Islamic Organization.",
+      notes: [
+        "Letter must be on letterheaded paper and be addressed to The Executive Director, First Class Muslim Foundation, Lagos, Nigeria.",
+        "Letters should genuinely speak to the character of the applicants and should not be generic.",
+        "Improperly addressed letters or generic letters will lead to disqualification.",
+      ],
+    },
+    ,
+    {
+      document:
+        "Current result slip showing student’s CGPA with the signature (and possibly stamp of the HOD).",
+      notes: [],
+    },
+    {
+      document:
+        "A Personal Statement to convince panelists as to why they should consider her for the scholarship. ",
+      notes: [
+        "The use of AI tools to generate personal statements is prohibited. All personal statements submitted will be tested and evaluated for plagiarism or AI-derivation. Applicants who disregard this may be disqualified from current and any future opportunities from the foundation.",
+        "Word limit for Personal Statement is 400.",
+        "Font type is Century Gothic and font size is 12.",
+        "Spacing should be 1.5.",
+        "Full name should be written at the top of the document.",
+      ],
+    },
+  ],
+  applicationDetails: {
+    portal: "www.fcmfoundation.org",
+    openDate: "Sunday 1st September, 2024",
+    closeDate: "Wednesday 25th September, 2024",
+  },
+};
 
 const slides = [
   {
@@ -171,13 +250,11 @@ export const HomeHero = () => {
                     </div>
                   </div>
                   <div className="mt-8">
-                    {slides[currentSlide].deadline !== "N/A" && (
-                      <Link href={slides[currentSlide].link}>
-                        <Button className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-700">
-                          Apply Now
-                        </Button>
-                      </Link>
-                    )}
+                    <Link href={slides[currentSlide].link}>
+                      <Button className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-700">
+                        Apply Now
+                      </Button>
+                    </Link>
                   </div>
                 </div>
                 <div className="md:w-1/2">
@@ -225,6 +302,140 @@ export const HomeHero = () => {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto p-4 bg-gray-50 min-h-screen">
+        <header className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-[#2f3497] mb-2">
+            {scholarshipData.title}
+          </h1>
+          <p className="text-xl text-[#c93eac]">{scholarshipData.subtitle}</p>
+        </header>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card className="border-[#2f3497] border-t-4">
+            <CardHeader>
+              <CardTitle className="text-[#2f3497]">About</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>{scholarshipData.about}</p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-[#c93eac] border-t-4">
+            <CardHeader>
+              <CardTitle className="text-[#c93eac]">Benefits</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5 space-y-2">
+                {scholarshipData.benefits.map((benefit, index) => (
+                  <li key={index}>{benefit}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="md:col-span-2 border-[#2f3497] border-t-4">
+            <CardHeader>
+              <CardTitle className="text-[#2f3497]">
+                Eligible Institutions
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ScrollArea className="h-[400px] w-full rounded-md border p-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {scholarshipData.eligibleInstitutions.map(
+                    (institution, index) => (
+                      <div key={index} className="flex items-start">
+                        <span className="text-[#2f3497] font-bold mr-2 min-w-[1.5rem]">
+                          {index + 1}.
+                        </span>
+                        <p>{institution}</p>
+                      </div>
+                    )
+                  )}
+                </div>
+              </ScrollArea>
+            </CardContent>
+          </Card>
+
+          <Card className="border-[#c93eac] border-t-4">
+            <CardHeader>
+              <CardTitle className="text-[#c93eac]">
+                Eligibility Criteria
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5 space-y-2">
+                {scholarshipData.eligibilityCriteria.map((criteria, index) => (
+                  <li key={index}>{criteria}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="border-[#2f3497] border-t-4">
+            <CardHeader>
+              <CardTitle className="text-[#2f3497]">
+                Required Documents
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                The following documents are to be provided and uploaded during
+                the application:
+              </p>
+              <ul className="list-disc pl-5 space-y-2">
+                {scholarshipData.requiredDocuments.map((item, index) => (
+                  <li key={index}>
+                    <p>
+                      <strong>{item.document}</strong>{" "}
+                    </p>
+                    {item.notes.length > 0 && (
+                      <ul className="list-disc pl-5">
+                        {item.notes.map((note, noteIndex) => (
+                          <li key={noteIndex}>{note}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="md:col-span-2 border-[#c93eac] border-t-4">
+            <CardHeader>
+              <CardTitle className="text-[#c93eac]">
+                Application Details
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <div>
+                <p className="font-semibold">Application Opens:</p>
+                <p>{scholarshipData.applicationDetails.openDate}</p>
+              </div>
+              <div>
+                <p className="font-semibold">Application Closes:</p>
+                <p>{scholarshipData.applicationDetails.closeDate}</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="mt-8 text-center">
+          <Button
+            className="bg-[#2f3497] hover:bg-[#c93eac] text-white font-bold py-2 px-4 rounded transition duration-300"
+            onClick={() =>
+              window.open(
+                `https://www.fcmfoundation.org/programs/fbs`,
+                "_blank"
+              )
+            }
+          >
+            Apply Now
+          </Button>
+        </div>
+      </div>
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
