@@ -17,9 +17,9 @@ export const ProgramsHero = () => {
                     <p className="mt-6 text-xl text-purple-600 text-balance">
                         A series af activities that define your Path to career excellence for excellent students in an Islamic sphere,
                     </p>
-                    <Button className='bg-purple-900 hover:bg-white mt-8' href="/programs/m-first" invert={invert}>
+                    {/* <Button className='bg-purple-900 hover:bg-white mt-8' href="/programs/m-first" invert={invert}>
                         Join M-First Series
-                    </Button>
+                    </Button> */}
                 </FadeIn>
             </Container>
         </div>

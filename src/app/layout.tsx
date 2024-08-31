@@ -5,12 +5,12 @@ import "./globals.css";
 import { RootLayout as CustomLayout } from "@/components/uis/RootLayout";
 
 const inter = Inter({ subsets: ["latin"] });
-const manrope = Manrope({ subsets: ["latin"]});
-
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "M-First Series (FCMF)",
-  description: "The M-First Series, an program of The First Class Muslim Foundation",
+  title: "FCM Foundation (FCMF)",
+  description:
+    "The M-First Series, an program of The First Class Muslim Foundation",
 };
 
 export default function RootLayout({
@@ -21,10 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <CustomLayout>
-        {children}
-        </CustomLayout>
-        </body>
+        <CustomLayout>{children}</CustomLayout>
+      </body>
     </html>
   );
 }
