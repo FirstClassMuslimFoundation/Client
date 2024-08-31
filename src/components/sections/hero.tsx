@@ -5,7 +5,7 @@ import { FadeIn } from "../uis/FadeIn";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
+import YouTube from "react-youtube";
 import {
   BookOpen,
   Users,
@@ -134,7 +134,7 @@ const slides = [
       "Be ready to attend the one day mentorship session in person in Lagos, Nigeria in November 2024.",
     ],
     deadline: "Sunday 1st September, 2024 to Wednesday 25th September, 2024",
-    link: "programs/fbs",
+    link: "#fcm-foundation-board-scholarship",
   },
   {
     title: "STUDENTS’ MENTORSHIP PROGRAMME 2024",
@@ -206,20 +206,38 @@ export const HomeHero = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 0,
+    },
+  };
 
   return (
     <div className="hero-container">
       <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-purple-600 font-semibold tracking-tight text-purple-950 text-balance sm:text-7xl">
-            Welcome to The First Class Muslim Foundation
-          </h1>
-          <p className="mt-6 text-xl text-purple-600 text-balance">
-            Empowering excellence through faith-based initiatives, nurturing
-            talent, and building a strong, unified community.
-          </p>
-        </FadeIn>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <FadeIn className="max-w-2xl">
+            <h1 className="font-display text-6xl sm:text-7xl md:text-8xl font-semibold tracking-tight text-purple-950 text-balance">
+              Welcome to First Class Muslim Foundation
+            </h1>
+            <p className="mt-6 text-xl text-purple-600 text-balance">
+              We provide holistic support systems for Muslim youths to thrive,
+              excel, grow, and become individuals with great accomplishments and
+              global impact.
+            </p>
+          </FadeIn>
+          <FadeIn className="flex-grow flex justify-center items-center">
+            <YouTube
+              videoId={"soqfpQnJ6r0"}
+              opts={opts}
+              className="w-full h-full"
+            />
+          </FadeIn>
+        </div>
       </Container>
+
       <section className="w-full py-12 md:py-24 lg:py-32 bg-purple-50">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
@@ -270,9 +288,9 @@ export const HomeHero = () => {
                     </div>
                   </div>
                   <div className="mt-8">
-                    <Link href={slides[currentSlide].link}>
+                    <Link href={`${slides[currentSlide].link}`}>
                       <Button className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-700">
-                        Apply Now
+                        Read More
                       </Button>
                     </Link>
                   </div>
@@ -323,7 +341,10 @@ export const HomeHero = () => {
         </div>
       </section>
 
-      <div className="container mx-auto p-4 bg-gray-50 min-h-screen">
+      <div
+        id="fcm-foundation-board-scholarship"
+        className="container mx-auto p-4 bg-gray-50 min-h-screen"
+      >
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold text-[#2f3497] mb-2">
             {scholarshipData.title}
@@ -394,15 +415,15 @@ export const HomeHero = () => {
           </Card>
 
           <Card className="border-[#2f3497] border-t-4">
+            <CardHeader>
+              <CardTitle className="text-[#2f3497]">
+                Required Documents for Application
+              </CardTitle>
+            </CardHeader>
             <CardContent>
-              <h3>
-                <strong>Required Documents for Application</strong>
-              </h3>
               <p>
-                <strong>
-                  The following documents are to be provided and uploaded during
-                  the application:
-                </strong>
+                The following documents are to be provided and uploaded during
+                the application:
               </p>
               <ul className="list-disc pl-5 space-y-2">
                 {scholarshipData.requiredDocuments.map((item, index) =>
