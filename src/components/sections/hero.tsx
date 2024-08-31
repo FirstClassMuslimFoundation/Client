@@ -17,7 +17,7 @@ import {
   Twitter,
   Linkedin,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -29,12 +29,12 @@ const slides = [
     status: "Ongoing",
     image: "/images/boardScholars.png",
     eligibility: [
-      "Muslim youth aged 13-21",
-      "Committed to personal growth",
-      "Willing to meet regularly with a mentor",
-      "Parental consent required for minors",
+      "Be a female undergraduate Muslim student",
+      "Be currently in 200 or 300 level in one of the 22 eligible universities",
+      "Have a minimum CGPA of 4.5 and above (or equivalence)",
+      "Be ready to attend the one day mentorship session in person in Lagos, Nigeria in November 2024.",
     ],
-    deadline: "Rolling applications",
+    deadline: "Sunday 1st September, 2024 to Wednesday 25th September, 2024",
     link: "programs/fbs",
   },
   {
@@ -50,38 +50,55 @@ const slides = [
     deadline: "N/A",
     link: "#",
   },
+  {
+    title: "M-First Leadership Training (M-First Series)",
+    description:
+      "M-First series is a leadership program design to groom and re- orientate Muslim First-Class Graduates in Nigeria. The overarching goal of M-First Series is to enhance scholastic and impactful future for first class Muslim graduates. The series ultimately prepares them for future career challenges and guides them to a purposeful future.",
+    status: "Past",
+    image: "/images/mFirst.png",
+    eligibility: [
+      "A first class graduate of state, federal, or Private universities or polytechnics.",
+      "Be a muslim.",
+    ],
+    deadline: "N/A",
+    link: "#",
+  },
 ];
 
 const trustees = [
   {
-    name: "Dr. Aisha Rahman",
-    role: "Chairperson",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Dr. Rahman is a renowned Islamic scholar with over 20 years of experience in community leadership.",
+    name: "Sulaimon O. Ogumuyiwa (PhD)",
+    role: "Chairman",
+    image: "/images/chairman.png",
+    bio: "Dr. Sulaimon Ogunmuyiwa is a distinguished Counsellor, Speaker, and Educational Administrator. His academic journey culminated in a Ph.D. in Education Administration and Planning from the University of Abuja.",
   },
   {
-    name: "Yusuf Abdullah",
-    role: "Vice Chairperson",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Mr. Abdullah is a successful entrepreneur and philanthropist, dedicated to empowering Muslim youth.",
+    name: "Abolore A. Shobayo",
+    role: "Executive Director",
+    image: "/images/executiveDirector.png",
+    bio: "Abolore Sobayo, founder of Cowrie Studios, is a visual artist with a keen political consciousness.Sobayo’s dedication to art speaks clearly with a unique voice especially in light of his recent exhibitions both locally and internationally.",
   },
   {
-    name: "Maryam Hassan",
-    role: "Secretary",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Ms. Hassan is a civil rights attorney and advocate for Muslim representation in public service.",
+    name: "Engr. Faheed Olajide",
+    role: "Board Member",
+    image: "/images/boardMember.png",
+    bio: "Engr. Faheed Olajide, based in Nigeria, is currently the Chief Executive Officer of Omnicom Solutions Limited, bringing experience from previous roles at AVAS Technologies Limited, Payvantage Limited and Alcatel-Lucent.",
   },
   {
-    name: "Ibrahim Malik",
-    role: "Treasurer",
-    image: "/placeholder.svg?height=300&width=300",
-    bio: "Mr. Malik is a certified public accountant with extensive experience in non-profit financial management.",
+    name: "Qazeem Akinlotan (MSc)",
+    role: "Programme & Administrative Head",
+    image: "/images/adminHead.png",
+    bio: "Qazeem is a Parasitologist, Vector Biologist and Bioinformatician. He has his first degree in Zoology (Parasitology) from the prestigious University of Lagos. He also holds a Masters in Parasitology and Bioinformatics from the same University.",
   },
 ];
 
 export const HomeHero = () => {
-  // Move useState hook inside the HomeHero component
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -154,11 +171,13 @@ export const HomeHero = () => {
                     </div>
                   </div>
                   <div className="mt-8">
-                    <Link href={slides[currentSlide].link}>
-                      <Button className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-700">
-                        Apply Now
-                      </Button>
-                    </Link>
+                    {slides[currentSlide].deadline !== "N/A" && (
+                      <Link href={slides[currentSlide].link}>
+                        <Button className="w-full sm:w-auto bg-purple-600 text-white hover:bg-purple-700">
+                          Apply Now
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </div>
                 <div className="md:w-1/2">
@@ -264,7 +283,7 @@ export const HomeHero = () => {
                   {trustee.role}
                 </p>
                 <p className="text-gray-600 text-sm mb-6">{trustee.bio}</p>
-                <div className="flex space-x-3">
+                {/* <div className="flex space-x-3">
                   <a
                     href="#"
                     className="text-purple-600 hover:text-purple-800 transition-colors duration-300"
@@ -286,7 +305,7 @@ export const HomeHero = () => {
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
                   </a>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

@@ -10,7 +10,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "FCM Foundation (FCMF)",
   description:
-    "The M-First Series, an program of The First Class Muslim Foundation",
+    "Build students’ capacity by providing academic and professional support services with Islamic ethics to raising excellent youths.",
 };
 
 export default function RootLayout({
