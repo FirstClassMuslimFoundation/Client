@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { RootLayout as CustomLayout } from "@/components/uis/RootLayout";
 
@@ -26,21 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <GoogleAnalytics gaId="G-C030FBJ396" />
       </Head>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=G-C030FBJ396`}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-C030FBJ396');
-            `,
-        }}
-      />
+
       <body className={manrope.className}>
         <CustomLayout>{children}</CustomLayout>
       </body>
