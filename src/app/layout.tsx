@@ -27,6 +27,20 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=G-C030FBJ396`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-C030FBJ396');
+            `,
+        }}
+      />
       <body className={manrope.className}>
         <CustomLayout>{children}</CustomLayout>
       </body>
