@@ -231,9 +231,9 @@ export const HomeHero = () => {
 
           <FadeIn className="md:w-1/2 flex justify-center items-center">
             <Image
-              src={"/images/hero.png"}
+              src={"/images/heroFemale.JPG"}
               alt={"Hero Section Image"}
-              width={400}
+              width={600}
               height={400}
               objectFit="cover"
               className="rounded-lg"
