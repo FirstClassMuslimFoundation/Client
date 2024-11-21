@@ -150,7 +150,7 @@ function Navigation() {
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/team">Our Team</NavigationItem>
-        <NavigationItem href="/contact">Contact</NavigationItem>
+        <NavigationItem href="/careers">Careers</NavigationItem>
       </NavigationRow>
     </nav>
   );
@@ -291,4 +291,3 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
     </RootLayoutContext.Provider>
   );
 }
-
