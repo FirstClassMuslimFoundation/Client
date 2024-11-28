@@ -41,54 +41,42 @@ interface ScholarshipData {
   };
 }
 const scholarshipData = {
-  title: "FCM Foundation Board Scholarship",
+  title: "Undergraduate Learning Support Programme (Female) 2025",
   subtitle:
     "For female undergraduates in selected public universities in Nigeria",
   about:
-    "FCM Foundation Board Scholarship (FCM FBS) is a debut scholarship programme aimed at providing a one-time academic support to female Muslim students in 200 and 300 levels. The scholarship includes one-time monetary support and a one-day mentorship session for selected scholars.",
+    "Undergraduate Learning Support Programme (Female) is a scholarship and mentorship programme for female Muslim undergraduate students who demonstrates excellent academic abilities. The programme provides Islamic mentorship as well as academic support, in the form of stipends, to selected scholars in a bid to enhance the building of academically excellent students with good Islamic and moral background.",
   benefits: [
-    "Scholarship Funds",
-    "One day mentorship session",
-    "Post scholarship disbursement mentorship and guidance",
-    "Possible future support for higher learning",
+    "Islamic Development Mentorship Sessions and Training",
+    "Academic and Career Development Mentorship",
+    "Monthly Stipends amongst others",
   ],
   eligibleInstitutions: [
-    "Federal University of Technology, Akure",
-    "Obafemi Awolowo University, Ile-Ife",
-    "Federal University of Agriculture, Abeokuta",
-    "University of Ibadan",
-    "University of Lagos",
-    "University of Ilorin",
-    "Federal University of Health Sciences, Ila Orangun, Osun State",
-    "Adeyemi Federal University of Education, Ondo",
-    "Adekunle Ajasin University, Akungba",
-    "Ekiti State University",
-    "Kwara State University, Ilorin",
-    "Ladoke Akintola University of Technology, Ogbomoso",
-    "Ondo State University of Science and Technology Okitipupa",
-    "Olabisi Onabanjo University, Ago Iwoye",
+    "University of Lagos, Akoka",
     "Lagos State University, Ojo",
-    "Tai Solarin University of Education Ijebu Ode",
-    "Osun State University Osogbo",
-    "Ondo State University of Medical Sciences",
-    "First Technical University Ibadan",
-    "Lagos State University of Education, Ijanikin",
-    "Lagos State University of Science and Technology Ikorodu",
-    "University of Ilesa, Osun State",
   ],
   eligibilityCriteria: [
-    "Be a female undergraduate Muslim student",
-    "Be currently in 200 or 300 level in one of the 22 eligible universities",
-    "Have a minimum CGPA of 4.5 and above (or equivalence)",
-    "Be ready to attend the one day mentorship session in person in Lagos, Nigeria in November 2024",
+    "100 level female Muslim undergraduates",
+    "Full time student at the University of Lagos, Akoka or Lagos State University, Ojo",
+    "Between 16 and 19 years old",
+    "Have minimum of six credit passes in SSCE in one sitting",
+    "Scored minimum of 250 in last UTME taken before admission",
+    "Physically, mentally and psychologically stable",
+    "Good moral conducts and leadership abilities",
   ],
   requiredDocuments: [
     {
-      document: "Student Identity Card (valid card of applicant’s institution)",
+      document: "JAMB Admission Letter",
       notes: [],
     },
     {
-      document: "Reference letter from a reputable Islamic Organization.",
+      document:
+        "Evidence of Current Studentship of Institution (ID Card, Biodata Form e.t.c)",
+      notes: [],
+    },
+    {
+      document:
+        "Reference letter from a reputable Islamic Organization (Institution-based Students Organizations are not acceptable)",
       notes: [
         "Letter must be on letterheaded paper and be addressed to The Executive Director, First Class Muslim Foundation, Lagos, Nigeria.",
         "Letters should genuinely speak to the character of the applicants and should not be generic.",
@@ -97,26 +85,37 @@ const scholarshipData = {
     },
     ,
     {
-      document:
-        "Current result slip showing student’s CGPA with the signature (and possibly stamp of the HOD).",
+      document: "Birth Certificate or Affidavit of Age",
+      notes: [],
+    },
+    {
+      document: "Original WAEC Result",
+      notes: [],
+    },
+    {
+      document: "Original UTME Result",
+      notes: [],
+    },
+    {
+      document: "Current result slip showing student GPA (If available)",
       notes: [],
     },
     {
       document:
-        "A Personal Statement to convince panelists as to why they should consider her for the scholarship. ",
+        "A Personal Statement to convince panellists as to why they should consider her for the scholarship.",
       notes: [
-        "The use of AI tools to generate personal statements is prohibited. All personal statements submitted will be tested and evaluated for plagiarism or AI-derivation. Applicants who disregard this may be disqualified from current and any future opportunities from the foundation.",
-        "Word limit for Personal Statement is 400.",
+        "Word limit for Personal Statement is 300.",
         "Font type is Century Gothic and font size is 12.",
         "Spacing should be 1.5.",
         "Full name should be written at the top of the document.",
+        "The unethical use of AI tools to generate or significantly adjust/review personal statements is prohibited. All personal statements submitted will be tested and evaluated for plagiarism or AI-derivation. AI detection beyond 20% is not acceptable. Applicants who disregard this will be disqualified from current and any future opportunities from the foundation.",
       ],
     },
   ],
   applicationDetails: {
     portal: "www.fcmfoundation.org",
-    openDate: "Sunday 1st September, 2024",
-    closeDate: "Wednesday 25th September, 2024",
+    openDate: "1st December, 2024",
+    closeDate: "14th December 2024",
   },
 };
 
@@ -125,7 +124,7 @@ const slides = [
     title: "FCM Foundation Board Scholarship",
     description:
       "The FCM Foundation Board Scholarship empowers the next generation of female leaders by supporting female undergraduates in selected public universities across Nigeria. This scholarship program aims to uplift and provide opportunities for young Muslim women to excel academically and professionally.",
-    status: "Ongoing",
+    status: "Past",
     image: "/images/boardScholars.png",
     eligibility: [
       "Be a female undergraduate Muslim student",
@@ -386,20 +385,20 @@ export const HomeHero = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ScrollArea className="h-[400px] w-full rounded-md border p-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {scholarshipData.eligibleInstitutions.map(
-                    (institution, index) => (
-                      <div key={index} className="flex items-start">
-                        <span className="text-[#2f3497] font-bold mr-2 min-w-[1.5rem]">
-                          {index + 1}.
-                        </span>
-                        <p>{institution}</p>
-                      </div>
-                    )
-                  )}
-                </div>
-              </ScrollArea>
+              {/* <ScrollArea className="h-[400px] w-full rounded-md border p-4"> */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {scholarshipData.eligibleInstitutions.map(
+                  (institution, index) => (
+                    <div key={index} className="flex items-start">
+                      <span className="text-[#2f3497] font-bold mr-2 min-w-[1.5rem]">
+                        {index + 1}.
+                      </span>
+                      <p>{institution}</p>
+                    </div>
+                  )
+                )}
+              </div>
+              {/* </ScrollArea> */}
             </CardContent>
           </Card>
 
@@ -474,7 +473,7 @@ export const HomeHero = () => {
             className="bg-[#2f3497] hover:bg-[#c93eac] text-white font-bold py-2 px-4 rounded transition duration-300"
             onClick={() =>
               window.open(
-                `https://www.fcmfoundation.org/programs/fbs`,
+                `https://www.fcmfoundation.org/programs/ulsp-female`,
                 "_blank"
               )
             }
