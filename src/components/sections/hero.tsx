@@ -121,6 +121,24 @@ const scholarshipData = {
 
 const slides = [
   {
+    title: "Undergraduate Learning Support Programme (Female) 2025",
+    description:
+      "Undergraduate Learning Support Programme (Female) is a scholarship and mentorship programme for female Muslim undergraduate students who demonstrates excellent academic abilities. The programme provides Islamic mentorship as well as academic support, in the form of stipends, to selected scholars in a bid to enhance the building of academically excellent students with good Islamic and moral background.",
+    status: "Ongoing",
+    image: "/images/ulspfemale.jpeg",
+    eligibility: [
+      "100 level female Muslim undergraduates",
+      "Full time student at the University of Lagos, Akoka or Lagos State University, Ojo",
+      "Between 16 and 19 years old",
+      "Have minimum of six credit passes in SSCE in one sitting",
+      "Scored minimum of 250 in last UTME taken before admission",
+      "Physically, mentally and psychologically stable",
+      "Good moral conducts and leadership abilities",
+    ],
+    deadline: "Sunday 1st December, 2024 to Wednesday 14th December, 2024",
+    link: "#ulsp-female",
+  },
+  {
     title: "FCM Foundation Board Scholarship",
     description:
       "The FCM Foundation Board Scholarship empowers the next generation of female leaders by supporting female undergraduates in selected public universities across Nigeria. This scholarship program aims to uplift and provide opportunities for young Muslim women to excel academically and professionally.",
