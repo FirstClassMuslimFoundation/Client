@@ -125,7 +125,7 @@ const slides = [
     description:
       "Undergraduate Learning Support Programme (Female) is a scholarship and mentorship programme for female Muslim undergraduate students who demonstrates excellent academic abilities. The programme provides Islamic mentorship as well as academic support, in the form of stipends, to selected scholars in a bid to enhance the building of academically excellent students with good Islamic and moral background.",
     status: "Ongoing",
-    image: "/images/ulspfemale.jpeg",
+    image: "/images/ulspfemale.jpg",
     eligibility: [
       "100 level female Muslim undergraduates",
       "Full time student at the University of Lagos, Akoka or Lagos State University, Ojo",
