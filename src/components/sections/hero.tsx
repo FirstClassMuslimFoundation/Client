@@ -41,11 +41,11 @@ interface ScholarshipData {
   };
 }
 const scholarshipData = {
-  title: "Undergraduate Learning Support Programme (Female) 2025",
+  title: "Undergraduate Learning Support Programme (Male) 2025",
   subtitle:
-    "For female undergraduates in selected public universities in Nigeria",
+    "For male undergraduates in selected public universities in Nigeria",
   about:
-    "Undergraduate Learning Support Programme (Female) is a scholarship and mentorship programme for female Muslim undergraduate students who demonstrates excellent academic abilities. The programme provides Islamic mentorship as well as academic support, in the form of stipends, to selected scholars in a bid to enhance the building of academically excellent students with good Islamic and moral background.",
+    "Undergraduate Learning Support Programme (Male) is a scholarship and mentorship programme for male Muslim undergraduate students who demonstrates excellent academic abilities. The programme provides Islamic mentorship as well as academic support, in the form of stipends, to selected scholars in a bid to enhance the building of academically excellent students with good Islamic and moral background.",
   benefits: [
     "Islamic Development Mentorship Sessions and Training",
     "Academic and Career Development Mentorship",
@@ -54,10 +54,12 @@ const scholarshipData = {
   eligibleInstitutions: [
     "University of Lagos, Akoka",
     "Lagos State University, Ojo",
+    "Lagos State University of Science & Technology",
+    "Lagos State University of Education",
   ],
   eligibilityCriteria: [
-    "100 level female Muslim undergraduates",
-    "Full time student at the University of Lagos, Akoka or Lagos State University, Ojo",
+    "100 level male Muslim undergraduates",
+    "Full time student at the eligible institutions",
     "Between 16 and 19 years old",
     "Have minimum of six credit passes in SSCE in one sitting",
     "Scored minimum of 250 in last UTME taken before admission",
@@ -114,17 +116,35 @@ const scholarshipData = {
   ],
   applicationDetails: {
     portal: "www.fcmfoundation.org",
-    openDate: "1st December, 2024",
-    closeDate: "14th December 2024",
+    openDate: "15th December, 2024",
+    closeDate: "5th January, 2025",
   },
 };
 
 const slides = [
   {
+    title: "Undergraduate Learning Support Programme (Male) 2025",
+    description:
+      "Undergraduate Learning Support Programme (Male) is a scholarship and mentorship programme for male Muslim undergraduate students who demonstrates excellent academic abilities. The programme provides Islamic mentorship as well as academic support, in the form of stipends, to selected scholars in a bid to enhance the building of academically excellent students with good Islamic and moral background.",
+    status: "Ongoing",
+    image: "/images/ulspmale-2025.jpg",
+    eligibility: [
+      "100 level male Muslim undergraduates",
+      "Full time student at the eligible institutions",
+      "Between 16 and 19 years old",
+      "Have minimum of six credit passes in SSCE in one sitting",
+      "Scored minimum of 250 in last UTME taken before admission",
+      "Physically, mentally and psychologically stable",
+      "Good moral conducts and leadership abilities",
+    ],
+    deadline: "Sunday 15th December, 2024 to Wednesday 5th January, 2025",
+    link: "#ulsp-male",
+  },
+  {
     title: "Undergraduate Learning Support Programme (Female) 2025",
     description:
       "Undergraduate Learning Support Programme (Female) is a scholarship and mentorship programme for female Muslim undergraduate students who demonstrates excellent academic abilities. The programme provides Islamic mentorship as well as academic support, in the form of stipends, to selected scholars in a bid to enhance the building of academically excellent students with good Islamic and moral background.",
-    status: "Ongoing",
+    status: "Past",
     image: "/images/ulspfemale.jpg",
     eligibility: [
       "100 level female Muslim undergraduates",
@@ -487,17 +507,11 @@ export const HomeHero = () => {
         </div>
 
         <div className="mt-8 text-center">
-          <Button
-            className="bg-[#2f3497] hover:bg-[#c93eac] text-white font-bold py-2 px-4 rounded transition duration-300"
-            onClick={() =>
-              window.open(
-                `https://www.fcmfoundation.org/programs/ulsp-female`,
-                "_blank"
-              )
-            }
-          >
-            Apply Now
-          </Button>
+          <Link href="/programs/ulsp-male" target="_blank">
+            <Button className="bg-[#2f3497] hover:bg-[#c93eac] text-white font-bold py-2 px-4 rounded transition duration-300">
+              Apply Now
+            </Button>
+          </Link>
         </div>
       </div>
       <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
